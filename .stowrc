@@ -1,0 +1,5 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=install.sh
+--ignore=readme.md
+--ignore=license.md
