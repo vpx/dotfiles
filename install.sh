@@ -22,6 +22,7 @@ packages=(
     "rofi"
     "slurp"
     "tmux"
+    "ttf-noto-nerd"
     "vi"
     "wl-clipboard"
     "wlr-randr"
