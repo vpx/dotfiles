@@ -27,6 +27,12 @@ packages=(
     "wl-clipboard"
     "wlr-randr"
     "xdg-desktop-portal-hyprland"
+    "zathura"
+    "zathura-pdf-mupdf"
+    "texlive-bin"
+    "texlive-latex"
+    "texlive-latexextra"
+    "texlive-formatsextra"
 )
 
 sudo pacman -S --noconfirm "${packages[@]}"
