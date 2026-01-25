@@ -54,4 +54,33 @@ return {
         local config = require("configs/vimtex")
       end
     },
+    {
+        "WGUNDERWOOD/tex-fmt",
+        lazy = false,
+        config = function()
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = "tex",
+                callback = function()
+                    vim.keymap.set(
+                        "n",
+                        "<localleader>f",
+                        function()
+                            if vim.bo.filetype ~= "tex" then return end
+                            vim.cmd("write")
+                            local filename = vim.fn.expand("%:p")
+                            vim.fn.system("tex-fmt --config .tex-fmt.toml " .. filename)
+                            vim.cmd("edit")
+                            print("tex-fmt applied to " .. vim.fn.expand("%:t"))
+                        end,
+                        {
+                            noremap = true,
+                            silent = true,
+                            desc = "Format current TeX file with tex-fmt",
+                            buffer = 0,
+                        }
+                    )
+                end
+            })
+        end
+    },
 }
