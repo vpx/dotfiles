@@ -47,6 +47,34 @@ return {
         end,
     },
     {
+        'L3MON4D3/LuaSnip',
+        config = function ()
+            require("configs/luasnip");
+        end
+    },
+    {
+        'hrsh7th/nvim-cmp',
+        config = function ()
+            require'cmp'.setup {
+                snippet = {
+                    expand = function(args)
+                        require'luasnip'.lsp_expand(args.body)
+                    end
+                },
+
+                sources = {
+                    { name = 'luasnip' },
+                    -- more sources
+                },
+            }
+
+            require("configs/cmp")
+        end
+    },
+    {
+        'saadparwaiz1/cmp_luasnip'
+    },
+    {
       "lervag/vimtex",
       ft = { "tex" },
       lazy = false,
