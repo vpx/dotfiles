@@ -30,6 +30,7 @@ packages=(
     "fish"
     "zathura"
     "zathura-pdf-mupdf"
+    "texlive"
     "texlive-bin"
     "texlive-latex"
     "texlive-latexextra"
