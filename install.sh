@@ -36,6 +36,7 @@ packages=(
     "texlive-latexextra"
     "texlive-formatsextra"
     "unzip"
+    "openssh"
 )
 
 sudo pacman -S --noconfirm "${packages[@]}"
