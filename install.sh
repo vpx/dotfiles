@@ -37,6 +37,7 @@ packages=(
     "texlive-formatsextra"
     "unzip"
     "openssh"
+    "gdb"
 )
 
 sudo pacman -S --noconfirm "${packages[@]}"
