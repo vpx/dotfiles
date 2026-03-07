@@ -38,6 +38,7 @@ packages=(
     "unzip"
     "openssh"
     "gdb"
+    "wget"
 )
 
 sudo pacman -S --noconfirm "${packages[@]}"
