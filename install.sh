@@ -39,6 +39,7 @@ packages=(
     "openssh"
     "gdb"
     "wget"
+    "fuse2"
 )
 
 sudo pacman -S --noconfirm "${packages[@]}"
